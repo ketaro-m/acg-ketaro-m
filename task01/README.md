@@ -37,6 +37,10 @@ Save the screenshot image overwriting `task01/problem2.png`
 
 <img src="problem2.png" width="300">
 
+### Reference
+
+- https://imagingsolution.net/program/python/numpy/solve_homography_matrix/
+- https://buaiso.blogspot.com/2012/07/glmultmatrixhomography.html
 
 ## After Doing the Assignment
 
