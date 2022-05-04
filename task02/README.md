@@ -26,7 +26,7 @@ Now you are ready to go!
 3. Take a screenshot image (looks like image at the top)
 4. Save the screenshot image overwriting `task02/problem1.png`
  
-![problem1](problem1.png)
+<img src="problem1.png" width="400">
 
 
 ## Problem 2
