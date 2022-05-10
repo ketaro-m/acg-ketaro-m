@@ -37,7 +37,7 @@ Read the instruction in the `shader.vert` for more information.
 
 Save the screenshot image overwriting `task02/problem2.png`
 
-![problem2](problem2.png)
+<img src="problem2.png" width="400">
 
 
 ## After Doing the Assignment
