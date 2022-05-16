@@ -45,7 +45,7 @@ float SDF(vec3 pos)
 
   // return sdf_sphere(pos, 0.8); // large sphere
   // return sdf_sphere_pattern(pos, 0.2, vec3(3, 3, 3)); // small sphere pattern
-  return sdf_sphere(pos, 0.8) -sdf_sphere_pattern(pos, 0.2, vec3(4, 4, 4));
+  return max(sdf_sphere(pos, 0.8), -sdf_sphere_pattern(pos, 0.2, vec3(4, 4, 4)));
 
   // // for "problem2" the code below is not used.
   // return sdf_box(pos, vec3(0.1,0.2,0.3));
