@@ -38,7 +38,7 @@ Read the instruction in the `main.cpp` for more information.
 
 Save the screenshot image overwriting `task04/problem2.png`
 
-![problem2](problem2.png)
+<img src="problem2.png" width="400">
 
 
 ## After Doing the Assignment
