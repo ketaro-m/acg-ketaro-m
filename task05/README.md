@@ -35,7 +35,7 @@ Write some code (about 5 ~ 10  lines) around `line #185` in `shader.frag`  to de
 
 Save the screenshot image overwriting `task05/problem2.png`
 
-![problem2](problem2.png)
+<img src="problem2.png" width="400">
 
 
 ## After Doing the Assignment
