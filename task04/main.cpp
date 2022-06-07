@@ -26,6 +26,7 @@
 #include "delfem2/opengl/tex.h"
 #include "delfem2/glfw/viewer3.h"
 #include "delfem2/glfw/util.h"
+#include <iostream>
 
 namespace dfm2 = delfem2;
 
@@ -57,15 +58,31 @@ double SamplingHemisphere(
   dir_local[0] = std::sin(theta) * std::cos(phi);
   dir_local[1] = std::sin(theta) * std::sin(phi);
   dir_local[2] = std::cos(theta);
-  dir[0] = dir_local[0] * nrm[2]/std::sqrt(1-nrm[1]*nrm[1]) + dir_local[2] * (-nrm[0])/std::sqrt(1-nrm[1]*nrm[1]);
-  dir[1] = dir_local[0] * (-nrm[0]*nrm[1])/std::sqrt(1-nrm[1]*nrm[1]) + dir_local[1] * std::sqrt(1-nrm[1]*nrm[1]) + dir_local[2] * (-nrm[1]*nrm[2])/std::sqrt(1-nrm[1]*nrm[1]);
-  dir[2] = dir_local[0] * nrm[0] + dir_local[1] * nrm[1] + dir_local[2] * nrm[2];
+  // dir[0] = dir_local[0] * nrm[2]/std::sqrt(1-nrm[1]*nrm[1]) + dir_local[2] * (-nrm[0])/std::sqrt(1-nrm[1]*nrm[1]);
+  // dir[1] = dir_local[0] * (-nrm[0]*nrm[1])/std::sqrt(1-nrm[1]*nrm[1]) + dir_local[1] * std::sqrt(1-nrm[1]*nrm[1]) + dir_local[2] * (-nrm[1]*nrm[2])/std::sqrt(1-nrm[1]*nrm[1]);
+  // dir[2] = dir_local[0] * nrm[0] + dir_local[1] * nrm[1] + dir_local[2] * nrm[2];
 
-  return std::cos(theta) * 2;
-  // double cos = nrm[0]*dir[0] + nrm[1]*dir[1] + nrm[2]*dir[2];
-  // return cos*2;
-
-
+  // local to global
+  double x[3] = {1,0,0};
+  double y[3];
+  dfm2::mat3::Cross3(y, nrm, x);
+  dfm2::mat3::Normalize3(y);
+  dfm2::mat3::Cross3(x, y, nrm);
+  dir[0] = x[0]*dir_local[0] + y[0]*dir_local[1] + nrm[0]*dir_local[2];
+  dir[1] = x[1]*dir_local[0] + y[1]*dir_local[1] + nrm[1]*dir_local[2];
+  dir[2] = x[2]*dir_local[0] + y[2]*dir_local[1] + nrm[2]*dir_local[2];
+  // my rotational transformation of local to global
+  double dir_my[3];
+  dir_my[0] = dir_local[0] * nrm[2]/std::sqrt(1-nrm[1]*nrm[1]) + dir_local[1] * (-nrm[0]*nrm[1])/std::sqrt(1-nrm[1]*nrm[1]) + dir_local[2] * nrm[0];
+  dir_my[1] = dir_local[1] * std::sqrt(1-nrm[1]*nrm[1]) + dir_local[2] * nrm[1];
+  dir_my[2] = dir_local[0] * (-nrm[0])/std::sqrt(1-nrm[1]*nrm[1]) + dir_local[1] * (-nrm[1]*nrm[2])/std::sqrt(1-nrm[1]*nrm[1]) + dir_local[2] * nrm[2];
+  std::string debug_str = "my solution: ["
+    + std::to_string(dir_my[0]) + ", " + std::to_string(dir_my[1]) + ", " + std::to_string(dir_my[2])
+    + "],  ideal solution: ["
+    + std::to_string(dir[0]) + ", " + std::to_string(dir[1]) + ", " + std::to_string(dir[2])
+    + "]";
+  std::cout << debug_str << std::endl;
+  return 1.0;
 
   // // below: naive implementation to "uniformly" sample hemisphere using "rejection sampling"
   // // to not be used for the "problem2" in the assignment
