@@ -43,7 +43,7 @@ Write code at `line #209` and `line #228` to implement linear blend skinning for
 
 Save the screenshot image overwriting `task06/problem2.png`
 
-![problem2](problem2.png)
+<img src="problem2.png" width="400">
 
 
 ## After Doing the Assignment
