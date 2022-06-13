@@ -39,7 +39,7 @@ Write code at `line #129` to implement Levenberg–Marquardt method for inverse 
 
 Save the screenshot image overwriting `task07/problem2.png`
 
-![problem2](problem2.png)
+<img src="problem2.png" width="400">
 
 
 ## After Doing the Assignment
