@@ -26,7 +26,7 @@ Now you are ready to go!
 3. Take a screenshot image (looks like image at the top)
 4. Save the screenshot image overwriting `task07/problem1.png`
 
-![problem1](problem1.png)
+<img src="problem1.png" width="400">
 
 By the way, the view navigation of this program works as 
 - rotation: `ctrl+left mouse button`,
