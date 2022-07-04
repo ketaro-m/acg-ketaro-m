@@ -69,3 +69,5 @@ build
 !assets/rb4.obj
 
 task09/cppmodule.cbp
+
+.venv
