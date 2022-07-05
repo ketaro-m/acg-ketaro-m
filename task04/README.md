@@ -1,21 +1,19 @@
-# Task1: View Transformation
+# Task04: Importance Sampling (Ambient Occlusion)
 
-**This assignment is still under construction** 
+![preview](preview.png)
 
-![preview](../doc/mole.png)
-
-**Deadline: Apr 21th(Thu) at 15:00pm**
+**Deadline: May 19th (Thu) at 15:00pm**
 
 ----
 
 ## Before Doing Assignment
 
-If you have not done the [task0](../task0), do it first to set up the C++ graphics developtment environment.
+If you have not done the [task00](../task00), do it first to set up the C++ graphics development environment.
 
 Follow [this document](../doc/submit.md) to submit the assignment, In a nutshell, before doing the assignment,  
 - make sure you synchronized the `main ` branch of your local repository  to that of remote repository.
-- make sure you created branch `task1` from `main` branch.
-- make sure you are currently in the `task1` branch (use `git branch -a` command).
+- make sure you created branch `task04` from `main` branch.
+- make sure you are currently in the `task04` branch (use `git branch -a` command).
 
 Now you are ready to go!
 
@@ -26,28 +24,21 @@ Now you are ready to go!
 1. Build the code using cmake
 2. Run the code
 3. Take a screenshot image (looks like image at the top)
-4. Save the screenshot image overwriting `task1/problem1.png`
+4. Save the screenshot image overwriting `task04/problem1.png`
  
-![problem1](problem1.png)
-
+<img src="problem1.png" width="400">
 
 
 ## Problem 2
 
-Modify `main.cpp` to scale and translate the vertex coordinate such that the center of the axis-aligned bounding box is at the origin.
+Write some code (about 5 ~ 7  lines) around `line #45` in `main.cpp` 
+to sample direction and weight for cosine weighted multiple importance sampling.
+After all, you will observe the faster convergence to the solution. 
+Read the instruction in the `main.cpp` for more information.
 
-Save the screenshot image overwriting `task1/problem2.png`
+Save the screenshot image overwriting `task04/problem2.png`
 
-![problem2](problem2.png)
-
-
-### Problem 3
-
-Modify `main.cpp` to define 4x4 projection matrix.
-
-projection is done with `50mm` lens.
-
-![problem3](problem3.png)
+<img src="problem2.png" width="400">
 
 
 ## After Doing the Assignment
