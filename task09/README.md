@@ -48,7 +48,7 @@ Write code around `line #45` in `main.cpp` to implement Poisson image editing.
 
 Save the screenshot image overwriting `task09/problem2.png`
 
-![problem2](problem2.png)
+<img src="problem2.png" width="500">
 
 
 ## After Doing the Assignment
