@@ -45,11 +45,11 @@ Topics:
 |(3)<br>Apr. 25| **Coordinate transformation2** | [task01](task01) | - |
 |(5)<br>May 2| **Rasterization** | [task02](task02) |  [[6]](http://nobuyuki-umetani.com/acg2022s/rasterization.pdf) |
 |(4)<br>May 9| **Ray Casting I** | [task03](task03) | [[7]](http://nobuyuki-umetani.com/acg2022s/implicit_modeling.pdf) |
-|(6)<br>May 16| **Ray Casting II** | [task04](task04) | - |
-|(7)<br>May 23| Optimization Ⅱ | task06 | - |
+|(6)<br>May 16| **Ray Casting II** | [task04](task04) | [[8]](http://nobuyuki-umetani.com/acg2022s/raycasting.pdf) |
+|(7)<br>May 23| Parametric curves / surfaces | [task05](task05) | [[9]](http://nobuyuki-umetani.com/acg2022s/curve.pdf)|
 |(8)<br>June 6|  Character deformation Ⅱ | task07 | - |
-|(9)<br>June 13| Variational mesh deformation | task08 | - |
-|(10)<br>June 20| Parametric curves / surfaces | task09 | - |
+|(9)<br>June 13| Optimization | task08 | - |
+|(10)<br>June 20| Variational mesh deformation | task09 | - |
 |(11)<br>June 27| Guest lecture by Dr. Ryoichi Ando | - | - |
 |(12)<br>July 4| Grid-based Fluid Ⅰ | task10 | - |
 |(13)<br>July 11| Grid-based Fluid Ⅱ | - | - |
@@ -76,14 +76,14 @@ Look at the following document.
 | [task00](task00)| build C++ Program with CMake | <img src="task00/preview.png" width=100px> |
 | [task01](task01)| 2D Homography Transformation | <img src="task01/preview.png" width=100px> |
 | [task02](task02)| GLSL Vertex Shader (Fisheye Lens) | <img src="task02/preview.png" width=100px> |
-| [task03](task03)| GLSL Fragment Shader (Sphere Tracing / SDF) | <img src="task03/preview.png" width=100px> | 
+| [task03](task03)| GLSL Fragment Shader (Sphere Tracing / SDF) | <img src="task03/preview.png" width=100px> |
 | [task04](task04)| Importance Sampling (Ambient Occlusion) |  <img src="task04/preview.png" width=100px> |
-| [task05](task05)| navigation mesh | 
-| [task06](task06)| laplacian mesh deformation |
-| [task07](task07)| inverse kinematics |
-| [task08](task08)| as-rigid-as possible mesh deformation |
-| [task09](task09)| subdivision surface |
-| [task11](task11)| FTDT simulation |
+| [task05](task05)| Rasterization of Cubic Bézier Curves (Sturm's Method) |<img src="task05/preview.png" width=100px>|
+| [task06](task06)| laplacian mesh deformation ||
+| [task07](task07)| inverse kinematics ||
+| [task08](task08)| as-rigid-as possible mesh deformation ||
+| [task09](task09)| subdivision surface ||
+| [task11](task11)| FTDT simulation ||
 
 ### Policy
 
@@ -100,8 +100,10 @@ Look at the following document.
 - [[4] Barycentric coordinate](http://nobuyuki-umetani.com/acg2022s/barycentric_coordinate.pdf)
 - [[5] Coordinate transformation](http://nobuyuki-umetani.com/acg2022s/transformation.pdf)
 - [[6] Rasterization](http://nobuyuki-umetani.com/acg2022s/rasterization.pdf)
-- [[6] Implicit Modeling](http://nobuyuki-umetani.com/acg2022s/implicit_modeling.pdf)
-- [[7] Ray Casting](http://nobuyuki-umetani.com/acg2022s/raycasting.pdf)
+- [[7] Implicit Modeling](http://nobuyuki-umetani.com/acg2022s/implicit_modeling.pdf)
+- [[8] Ray Casting](http://nobuyuki-umetani.com/acg2022s/raycasting.pdf)
+- [[9] Parametric Curve](http://nobuyuki-umetani.com/acg2022s/curve.pdf)
+
 
 ## Reading Material
 - [Introduction to Computer Graphics by Cem Yuksel](https://www.youtube.com/watch?v=vLSphLtKQ0o&list=PLplnkTzzqsZTfYh4UbhLGpI5kGd5oW_Hh)
