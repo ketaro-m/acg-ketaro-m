@@ -33,6 +33,13 @@
 
 .vs
 .vscode
+
+*.vcxproj
+*.pdb
+*.ilk
+*.tlog
+*.sln
+
 CMakeSettings.json
 CMakeFiles
 cmake_install.cmake
@@ -60,3 +67,7 @@ build
 !assets/rb2.obj
 !assets/rb3.obj
 !assets/rb4.obj
+
+task09/cppmodule.cbp
+
+.venv
