@@ -29,7 +29,7 @@ Now you are ready to go!
 <img src="problem1.png" width="400">
 
 By the way, the view navigation of this program works as 
-- rotation: `ctrl+left mouse button`,
+- rotation: `alt+left mouse button`,
 - translation: `shift+left mouse button`
 - scale: `mouse wheel`
 
