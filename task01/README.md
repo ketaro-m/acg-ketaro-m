@@ -26,7 +26,7 @@ Now you are ready to go!
 3. Take a screenshot image (looks like image at the top)
 4. Save the screenshot image overwriting `task01/problem1.png`
  
-![problem1](problem1.png)
+<img src="problem1.png" width="300">
 
 
 ## Problem 2
@@ -35,8 +35,12 @@ Write some code (about 20 lines) around `line #33` in `main.cpp` to define the H
 
 Save the screenshot image overwriting `task01/problem2.png`
 
-![problem2](problem2.png)
+<img src="problem2.png" width="300">
 
+### Reference
+
+- https://imagingsolution.net/program/python/numpy/solve_homography_matrix/
+- https://buaiso.blogspot.com/2012/07/glmultmatrixhomography.html
 
 ## After Doing the Assignment
 

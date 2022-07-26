@@ -12,6 +12,8 @@ Follow the instruction below to build the attached C++ code. This code will disp
 
 === (paste the screenshot image here`![](image file name)` ) === 
 
+<!-- ![preview](task00.png) -->
+<img src="task00.png" width="400">
 
 ----
 

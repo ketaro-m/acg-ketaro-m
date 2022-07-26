@@ -26,7 +26,7 @@ Now you are ready to go!
 3. Take a screenshot image (looks like image at the top)
 4. Save the screenshot image overwriting `task04/problem1.png`
  
-![problem1](problem1.png)
+<img src="problem1.png" width="400">
 
 
 ## Problem 2
@@ -38,7 +38,7 @@ Read the instruction in the `main.cpp` for more information.
 
 Save the screenshot image overwriting `task04/problem2.png`
 
-![problem2](problem2.png)
+<img src="problem2.png" width="400">
 
 
 ## After Doing the Assignment

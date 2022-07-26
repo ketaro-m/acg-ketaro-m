@@ -1,4 +1,4 @@
-#version 120
+#version 130
 
 // see the GLSL 1.2 specification:
 // https://www.khronos.org/registry/OpenGL/specs/gl/GLSLangSpec.1.20.pdf
@@ -16,6 +16,23 @@ float sdf_box( vec3 pos, vec3 hsize )
   return length(max(q,0.0)) + min(max(q.x,max(q.y,q.z)),0.0);
 }
 
+/**
+ * return: signed distance function where many small spheres are caved out from a big sphere.
+ * pos: position to evaluate SDF
+ * r: the radius of the sphere
+ */
+float sdf_sphere( vec3 pos, float r)
+{
+  return length(pos) - r;
+}
+
+float sdf_sphere_pattern( vec3 p, float c, vec3 l)
+{
+  vec3 q = p-c*clamp(round(p/c),-l,l);
+  return sdf_sphere(q, 0.12);
+}
+
+
 // Definition of singed distance funtion called from
 float SDF(vec3 pos)
 {
@@ -26,8 +43,12 @@ float SDF(vec3 pos)
   // Look Inigo Quilez's article for hints:
   // https://iquilezles.org/articles/distfunctions/
 
-  // for "problem2" the code below is not used.
-  return sdf_box(pos, vec3(0.1,0.2,0.3));
+  // return sdf_sphere(pos, 0.8); // large sphere
+  // return sdf_sphere_pattern(pos, 0.2, vec3(3, 3, 3)); // small sphere pattern
+  return max(sdf_sphere(pos, 0.8), -sdf_sphere_pattern(pos, 0.2, vec3(4, 4, 4)));
+
+  // // for "problem2" the code below is not used.
+  // return sdf_box(pos, vec3(0.1,0.2,0.3));
 }
 
 void main()

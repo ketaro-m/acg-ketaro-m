@@ -26,7 +26,7 @@ Now you are ready to go!
 3. Take a screenshot image (looks like image at the top)
 4. Save the screenshot image overwriting `task08/problem1.png`
 
-![problem1](problem1.png)
+<img src="problem1.png" width="400">
 
 By the way, the view navigation of this program works as 
 - rotation: `alt+left mouse button`,
@@ -39,7 +39,7 @@ Write code at `line #129` to implement Laplacian mesh deformation.
 
 Save the screenshot image overwriting `task08/problem2.png`
 
-![problem2](problem2.png)
+<img src="problem2.png" width="400">
 
 Look at Eigen's reference if you are interested in sparse linear solver: 
 - [Sparse linear algebra
